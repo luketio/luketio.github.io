@@ -10,11 +10,19 @@ module.exports = {
 	},
 	parserOptions: {
 		sourceType: 'module',
-		ecmaVersion: 2020
+		ecmaVersion: 'latest'
 	},
 	env: {
 		browser: true,
 		es2017: true,
 		node: true
+	},
+	rules: {
+		quotes: ['error', 'double'],
+		semi: ['error', 'always'],
+		indent: ['error', 'tab'],
+		'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
+		'comma-dangle': ['error', 'always'],
+		'eol-last': ['error', 'always']
 	}
 };
