@@ -1,9 +1,9 @@
-const daisyui = require('daisyui');
-const typography = require('@tailwindcss/typography');
-const forms = require('@tailwindcss/forms');
+const daisyui = require("daisyui");
+const typography = require("@tailwindcss/typography");
+const forms = require("@tailwindcss/forms");
 
 const config = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ["./src/**/*.{html,js,svelte,ts}"],
 
 	plugins: [forms, typography, daisyui],
 
@@ -16,8 +16,8 @@ const config = {
 		extend: {}
 	},
 	daisyui: {
-		prefix: '',
-		darkTheme: 'dark' // business
+		prefix: "",
+		darkTheme: "dark" // business
 	}
 };
 
