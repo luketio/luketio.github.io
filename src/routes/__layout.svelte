@@ -6,9 +6,9 @@
 
 <header>
 	<nav>
-		<Button href="/blog">Blog</Button>
+		<Button href="/posts">Posts</Button>
 		<Button href="/about">About</Button>
-		<Button href="/resume">Resume</Button>
+		<Button href="/resume/resume.pdf">Resume</Button>
 	</nav>
 </header>
 

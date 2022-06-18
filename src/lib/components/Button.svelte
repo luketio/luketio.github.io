@@ -3,7 +3,11 @@
 	export let rounded: boolean = false;
 </script>
 
-<a href={href} class:rounded={rounded === true}>
+<a 
+	href={href} 
+	sveltekit:prefetch 
+	class:rounded={rounded === true}
+>
 	<slot />
 </a>
 
