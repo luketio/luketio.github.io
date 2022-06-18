@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Button from "$lib/components/Button.svelte";
 
 	import "../app.scss";
@@ -8,7 +8,7 @@
 	<nav>
 		<Button href="/posts">Posts</Button>
 		<Button href="/about">About</Button>
-		<Button href="/resume/resume.pdf">Resume</Button>
+		<Button href="/resume">Resume</Button>
 	</nav>
 </header>
 
