@@ -1,14 +1,15 @@
 <script lang="ts">
 	export let href: string;
-	export let refer: boolean = false;
-	export let rounded: boolean = false;
+	export let refer = false;
+	export let rounded = false;
 </script>
 
-<a 
-	href={href} 
-	sveltekit:prefetch 
+<a
+	{href}
+	sveltekit:prefetch
 	class:rounded={rounded === true}
-	target={refer ? "_blank":""} rel={refer ? "noopener noreferrer":""}
+	target={refer ? "_blank" : ""}
+	rel={refer ? "noopener noreferrer" : ""}
 >
 	<slot />
 </a>

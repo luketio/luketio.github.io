@@ -1,6 +1,6 @@
 <script lang="ts" context="module">
 	/** @type {import('@sveltejs/kit').Load} */
-	export function load({ error, status }: {error: Error, status: number}) {
+	export function load({ error, status }: { error: Error; status: number }) {
 		return {
 			props: {
 				status: status,
@@ -9,7 +9,7 @@
 		};
 	}
 </script>
-  
+
 <script lang="ts">
 	import Button from "$lib/components/Button.svelte";
 

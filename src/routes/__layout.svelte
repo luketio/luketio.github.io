@@ -8,7 +8,7 @@
 	<nav>
 		<Button href="/posts">Posts</Button>
 		<Button href="/about">About</Button>
-		<Button refer href="/resume/resume.pdf">Resume</Button>
+		<Button refer href="/resume.pdf">Resume</Button>
 	</nav>
 </header>
 
@@ -16,7 +16,7 @@
 	<slot />
 </main>
 
-<footer >
+<footer>
 	<section>
 		<p>&copy; 2020 Luke Tong</p>
 	</section>
@@ -46,7 +46,7 @@
 			float: right;
 		}
 	}
-	
+
 	main {
 		margin-top: 5vh;
 	}
@@ -61,7 +61,8 @@
 		section {
 			margin-left: 33%;
 
-			a, p {
+			a,
+			p {
 				display: block;
 				margin-block: 12px;
 			}

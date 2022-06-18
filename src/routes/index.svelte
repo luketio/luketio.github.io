@@ -14,8 +14,11 @@
 <div id="splash">
 	<h1>Luke Tong</h1>
 	<h2>Political and Environmental activist</h2>
-	
-	<p>Thanks for visiting my website. I will sometimes post about the things that I'm working on as well as cool movements that I support and want to draw attention to.</p>
+
+	<p>
+		Thanks for visiting my website. I will sometimes post about the things that I'm working on
+		as well as cool movements that I support and want to draw attention to.
+	</p>
 
 	<Button href="/" rounded>Contact</Button>
 </div>
