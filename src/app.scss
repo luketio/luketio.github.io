@@ -1,3 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+	font-family: League Spartan;
+	src: url("/fonts/LeagueSpartan-Bold.ttf");
+}
+
+@font-face {
+	font-family: Work Sans Bold;
+	src: url("/fonts/WorkSans-Bold.ttf");
+}
+
+@font-face {
+	font-family: Work Sans;
+	src: url("/fonts/WorkSans-SemiBold.ttf");
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	-ms-overflow-style: none;
+	background-color: transparent;
+	color: $content-100;
+
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+		Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+	text-decoration: none;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+html {
+	background-color: $base-100;
+}
+
+h1 {
+	font-family: Work Sans Bold;
+	font-size: 4rem;
+}
+
+h2, h3 {
+	font-family: Work Sans;
+	letter-spacing: .1rem;
+}
+
+p {
+	line-height: 1.5rem;
+}
+
+// TODO: maybe move this to a seperate Link component so that buttons dont hover blue
+a {
+	font-weight: 500;
+	color: $content-200;
+
+	transition: 0.1s;
+
+	&:hover {
+		cursor: pointer;
+		color: $blue;
+	}
+}
