@@ -17,6 +17,12 @@
 	export let error: Error;
 </script>
 
+<svelte:head>
+	<title>{error.name}: {status}</title>
+	<meta name="title" content="Luke Tong's Blog" />
+	<meta name="description" content={`${error.name} ${status}: ${error.message}`} />
+</svelte:head>
+
 <div>
 	<h1>{status}</h1>
 	<h2>{error.name}: {error.message}</h2>
