@@ -1,7 +1,15 @@
-<script>
-	import Button from "$lib/components/Button.svelte";
+<script lang="ts">
+	export const hydrate = false;
+	export const prerender = true;
 
+	import Button from "$lib/components/Button.svelte";
 </script>
+
+<svelte:head>
+	<title>Luke Tong's Blog</title>
+	<meta name="title" content="Luke Tong's Blog" />
+	<meta name="description" content="Political and Environmental activist" />
+</svelte:head>
 
 <div id="splash">
 	<h1>Luke Tong</h1>
