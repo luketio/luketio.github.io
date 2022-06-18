@@ -17,13 +17,9 @@ specifiers:
   sass: ^1.49.11
   svelte: ^3.44.0
   svelte-check: ^2.7.1
-  svelte-pdf: ^1.0.11
   svelte-preprocess: ^4.10.5
   tslib: ^2.3.1
   typescript: ^4.7.2
-
-dependencies:
-  svelte-pdf: 1.0.11
 
 devDependencies:
   '@playwright/test': 1.22.2
@@ -708,10 +704,6 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /dommatrix/1.0.3:
-    resolution: {integrity: sha512-l32Xp/TLgWb8ReqbVJAFIvXmY7go4nTxxlWiAFyhoQw9RKEOHBZNnyGvJWqDVSPmq3Y9HlM4npqF/T6VMOXhww==}
-    dev: false
-
   /electron-to-chromium/1.4.160:
     resolution: {integrity: sha512-O1Z12YfyeX2LXYO7MdHIPazGXzLzQnr1ADW55U2ARQsJBPgfpJz3u+g3Mo2l1wSyfOCdiGqaX9qtV4XKZ0HNRA==}
     dev: true
@@ -1122,10 +1114,6 @@ packages:
     dependencies:
       flat-cache: 3.0.4
     dev: true
-
-  /file-saver/2.0.5:
-    resolution: {integrity: sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==}
-    dev: false
 
   /file-uri-to-path/1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
@@ -1743,18 +1731,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /pdfjs-dist/2.14.305:
-    resolution: {integrity: sha512-5f7i25J1dKIBczhgfxEgNxfYNIxXEdxqo6Qb4ehY7Ja+p6AI4uUmk/OcVGXfRGm2ys5iaJJhJUwBFwv6Jl/Qww==}
-    peerDependencies:
-      worker-loader: ^3.0.8
-    peerDependenciesMeta:
-      worker-loader:
-        optional: true
-    dependencies:
-      dommatrix: 1.0.3
-      web-streams-polyfill: 3.2.1
-    dev: false
-
   /picocolors/1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
     dev: true
@@ -2158,15 +2134,6 @@ packages:
       svelte: 3.48.0
     dev: true
 
-  /svelte-pdf/1.0.11:
-    resolution: {integrity: sha512-eRDxMLaQ51EBnlKB14C5Rj3kkWp16yilpgGyH0P6lYOs8hPRCxjbr40D+XST0Q3J+m4HKycsB8PsN6dAKRtlqA==}
-    dependencies:
-      file-saver: 2.0.5
-      pdfjs-dist: 2.14.305
-    transitivePeerDependencies:
-      - worker-loader
-    dev: false
-
   /svelte-preprocess/4.10.7_rti6thauhen66svi4ip5jnzcd4:
     resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}
     engines: {node: '>= 9.11.2'}
@@ -2347,11 +2314,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
-
-  /web-streams-polyfill/3.2.1:
-    resolution: {integrity: sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==}
-    engines: {node: '>= 8'}
-    dev: false
 
   /webidl-conversions/3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}

@@ -8,7 +8,7 @@
 	<nav>
 		<Button href="/posts">Posts</Button>
 		<Button href="/about">About</Button>
-		<Button href="/resume">Resume</Button>
+		<Button refer href="/resume/resume.pdf">Resume</Button>
 	</nav>
 </header>
 
