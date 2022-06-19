@@ -8,7 +8,12 @@
 	const click = () => dispatch("click");
 </script>
 
-<button {disabled} class:disabled={disabled === true} class:rounded={rounded === true} on:click|preventDefault={click}>
+<button
+	{disabled}
+	class:disabled={disabled === true}
+	class:rounded={rounded === true}
+	on:click|preventDefault={click}
+>
 	<slot />
 </button>
 
@@ -30,7 +35,7 @@
 
 		&:not(.disabled) {
 			&:hover {
-			box-shadow: 0 6px 8px -2px $base-300;
+				box-shadow: 0 6px 8px -2px $base-300;
 			}
 
 			&:active {
