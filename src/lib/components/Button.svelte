@@ -6,7 +6,6 @@
 
 <a
 	{href}
-	sveltekit:prefetch
 	class:rounded={rounded === true}
 	target={refer ? "_blank" : ""}
 	rel={refer ? "noopener noreferrer" : ""}

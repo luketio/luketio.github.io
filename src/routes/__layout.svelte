@@ -5,6 +5,10 @@
 </script>
 
 <header>
+	<a id="logo" href="/">
+		<img alt="logo svg" src="/logo.svg" />
+		luketio
+	</a>
 	<nav>
 		<Button href="/posts">Posts</Button>
 		<Button href="/about">About</Button>
@@ -36,12 +40,25 @@
 
 <style lang="scss">
 	header {
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 0;
 		width: 100%;
 		background-color: $base-300;
 
+		#logo {
+			display: inline-flex;
+			align-items: center;
+			font-family: Work Sans;
+			font-weight: bold;
+			padding-left: 9vw;
+
+			img {
+				padding: 8px;
+				height: 2rem;
+				width: 2rem;
+			}
+		}
 		nav {
 			float: right;
 		}
