@@ -1,8 +1,9 @@
 <script lang="ts">
-	export let placeholder: string = "Message";
+	export let placeholder = "Message";
+	export let value = "";
 </script>
 
-<input {placeholder} />
+<input type="text" {placeholder} bind:value />
 
 <style lang="scss">
 	input {

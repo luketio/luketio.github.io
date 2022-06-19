@@ -1,19 +1,20 @@
 <script lang="ts">
-	import { createEventDispatcher } from "svelte";
-
+	export let href: string | undefined = undefined;
+	export let refer = false;
 	export let rounded = false;
-	export let disabled = false;
-
-	const dispatch = createEventDispatcher();
-	const click = () => dispatch("click");
 </script>
 
-<button {disabled} class:rounded={rounded === true} on:click|preventDefault={click}>
+<a
+	{href}
+	class:rounded={rounded === true}
+	target={refer ? "_blank" : undefined}
+	rel={refer ? "noopener noreferrer" : undefined}
+>
 	<slot />
-</button>
+</a>
 
 <style lang="scss">
-	button {
+	a {
 		display: inline-block;
 		border: none;
 		padding-block: 0.8rem;

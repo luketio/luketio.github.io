@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "$lib/components/Button.svelte";
+	import Link from "$lib/components/Link.svelte";
 
 	import "../app.scss";
 </script>
@@ -10,8 +10,8 @@
 		luketio
 	</a>
 	<nav>
-		<Button href="/posts">Posts</Button>
-		<Button refer href="/resume.pdf">Resume</Button>
+		<Link href="/posts">Posts</Link>
+		<Link refer href="/resume.pdf">Resume</Link>
 	</nav>
 </header>
 
@@ -50,9 +50,9 @@
 			align-items: center;
 			font-weight: bold;
 			padding-left: 9vw;
+			padding-top: 6px;
 
 			img {
-				padding: 8px;
 				height: 2rem;
 				width: 2rem;
 			}

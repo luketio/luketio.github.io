@@ -63,7 +63,8 @@ p {
 }
 
 // TODO: maybe move this to a seperate Link component so that buttons dont hover blue
-a, button {
+a,
+button {
 	font-weight: 500;
 	color: $content-200;
 

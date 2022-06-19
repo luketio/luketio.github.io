@@ -2,13 +2,8 @@
 	export const hydrate = false;
 	export const prerender = true;
 
-	import Button from "$lib/components/Button.svelte";
-	import Input from "$lib/components/Input.svelte";
-	import TextArea from "$lib/components/TextArea.svelte";
-
-	const submit = () => {
-		console.log("hi");
-	};
+	import Link from "$lib/components/Link.svelte";
+	import ContactForm from "$lib/components/home/ContactForm.svelte";
 </script>
 
 <svelte:head>
@@ -25,7 +20,7 @@
 		as well as cool movements that I support and want to draw attention to.
 	</p>
 
-	<Button href="#contact" rounded>Contact</Button>
+	<Link href="#contact" rounded>Contact</Link>
 </section>
 
 <section id="about">
@@ -35,20 +30,12 @@
 <section id="contact">
 	<div>
 		<h2>Contact Me</h2>
-		<p>If you want to collaberate or just have questions, don't hesitate to answer me! I'm also open to discussions if you just want to talk.</p>
+		<p>
+			If you want to collaberate or just have questions, don't hesitate to answer me! I'm also
+			open to discussions if you just want to talk.
+		</p>
 	</div>
-	<div class="form">
-		<div class="top">
-			<Input placeholder="Email" />
-			<Input placeholder="Name" />
-		</div>
-		<TextArea placeholder="Write something about yourself or any questions!" />
-		<div class="bottom">
-			<div>
-				<Button onClick={submit} rounded>Submit</Button>
-			</div>
-		</div>
-	</div>
+	<ContactForm />
 </section>
 
 <style lang="scss">
@@ -78,36 +65,6 @@
 
 		h2 {
 			padding-bottom: 2vh;
-		}
-
-		.form {
-			display: grid;
-			grid-template-rows: 1fr 3fr 1.2fr;
-			grid-gap: 0.9rem;
-
-			background-color: $base-200;
-			border-radius: 5px;
-			border-top: 5px solid $blue;
-			padding: 0.9rem;
-
-			transition: 0.3s;
-
-			&:hover {
-				box-shadow: 0 6px 8px -2px $base-300;
-			}
-
-			.top {
-				display: flex;
-				gap: 0.9rem;
-			}
-			.bottom {
-				position: relative;
-				div {
-					position: absolute;
-					bottom: 0;
-					right: 0;
-				}
-			}
 		}
 	}
 </style>

@@ -1,8 +1,9 @@
 <script lang="ts">
-	export let placeholder: string = "Message";
+	export let placeholder = "Message";
+	export let value = "";
 </script>
 
-<textarea {placeholder} />
+<textarea {placeholder} bind:value />
 
 <style lang="scss">
 	textarea {
