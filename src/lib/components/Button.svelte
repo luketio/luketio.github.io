@@ -1,7 +1,8 @@
 <script lang="ts">
-	export let href: string;
+	export let href: string | undefined = undefined;
 	export let refer = false;
 	export let rounded = false;
+	export let onClick = () => {};
 </script>
 
 <a
@@ -9,6 +10,7 @@
 	class:rounded={rounded === true}
 	target={refer ? "_blank" : ""}
 	rel={refer ? "noopener noreferrer" : ""}
+	on:click={onClick}
 >
 	<slot />
 </a>
@@ -20,8 +22,6 @@
 		padding-inline: 1.5rem;
 
 		background-color: $base-300;
-
-		transition: ease 0.1s;
 
 		&:hover {
 			background-color: $base-200;

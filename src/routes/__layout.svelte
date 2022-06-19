@@ -11,7 +11,6 @@
 	</a>
 	<nav>
 		<Button href="/posts">Posts</Button>
-		<Button href="/about">About</Button>
 		<Button refer href="/resume.pdf">Resume</Button>
 	</nav>
 </header>
@@ -65,6 +64,7 @@
 	}
 
 	main {
+		display: block;
 		margin-top: 5vh;
 	}
 
