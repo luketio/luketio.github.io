@@ -48,7 +48,6 @@
 		#logo {
 			display: inline-flex;
 			align-items: center;
-			font-family: Work Sans;
 			font-weight: bold;
 			padding-left: 9vw;
 

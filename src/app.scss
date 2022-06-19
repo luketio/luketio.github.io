@@ -40,7 +40,7 @@ html {
 }
 
 h1 {
-	font-family: Work Sans Bold;
+	font-family: Work Sans Bold, inherit;
 	font-size: 4rem;
 }
 
@@ -54,7 +54,7 @@ h3 {
 
 h2,
 h3 {
-	font-family: Work Sans;
+	font-family: Work Sans, inherit;
 	letter-spacing: 0.1rem;
 }
 
@@ -63,7 +63,7 @@ p {
 }
 
 // TODO: maybe move this to a seperate Link component so that buttons dont hover blue
-a {
+a, button {
 	font-weight: 500;
 	color: $content-200;
 

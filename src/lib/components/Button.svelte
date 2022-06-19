@@ -3,9 +3,13 @@
 	export let refer = false;
 	export let rounded = false;
 	export let onClick = () => {};
+
+	let element = href ? "a" : "button";
 </script>
 
-<a
+<svelte:element 
+	class="btn"
+	this={element}
 	{href}
 	class:rounded={rounded === true}
 	target={refer ? "_blank" : ""}
@@ -13,11 +17,12 @@
 	on:click={onClick}
 >
 	<slot />
-</a>
+</svelte:element>
 
 <style lang="scss">
-	a {
+	.btn {
 		display: inline-block;
+		border: none;
 		padding-block: 0.8rem;
 		padding-inline: 1.2rem;
 
