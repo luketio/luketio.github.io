@@ -1,32 +1,42 @@
 <script lang="ts">
 	import { form as createForm, field } from "svelte-forms";
-	import { required } from "svelte-forms/validators";
+	import { required, email } from "svelte-forms/validators";
+
 
 	import Button from "../Button.svelte";
 	import Input from "../Input.svelte";
 	import TextArea from "../TextArea.svelte";
 
-	const email = field("email", "", [required()], { checkOnInit: true });
-	const name = field("name", "", [required()], { checkOnInit: true });
-	const message = field("message", "", [required()], { checkOnInit: true });
+	const emailField = field("email", '', [required(), email()], { valid: false});
+	const nameField = field("name", '', [required()], { valid: false});
+	const messageField = field("message", '', [required()], { valid: false});
 
-	const contactForm = createForm(email, name, message);
+	const contactForm = createForm(emailField, nameField, messageField);
 
 	const submit = () => {
-		alert(`${$message.value} hi sent you a message`);
+		alert();
 	};
 </script>
 
 <form>
 	<div class="top">
-		<Input placeholder="Email" bind:value={$email.value} />
-		<Input placeholder="Name" bind:value={$name.value} />
+		<Input placeholder="Email" bind:value={$emailField.value} />
+		<Input placeholder="Name" bind:value={$nameField.value} />
 	</div>
 	<TextArea
 		placeholder="Write something about yourself or any questions!"
-		bind:value={$message.value}
+		bind:value={$messageField.value}
 	/>
 	<div class="bottom">
+		{#if $contactForm.hasError('email.not_an_email')}
+			<p>✕ Valid email is required</p>
+		{/if}
+		{#if $contactForm.hasError('name.required')}
+			<p>✕ Name is required</p>
+		{/if}
+		{#if $contactForm.hasError('message.required')}
+			<p>✕ Message body is required</p>
+		{/if}
 		<div>
 			<Button disabled={!$contactForm.valid} on:click={submit} rounded>Submit</Button>
 		</div>
@@ -60,6 +70,11 @@
 				position: absolute;
 				bottom: 0;
 				right: 0;
+			}
+			p {
+				line-height: 0.9rem;
+				font-size: small;
+				margin-left: 5px;
 			}
 		}
 	}
