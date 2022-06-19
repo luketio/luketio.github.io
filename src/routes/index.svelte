@@ -3,6 +3,12 @@
 	export const prerender = true;
 
 	import Button from "$lib/components/Button.svelte";
+	import Input from "$lib/components/Input.svelte";
+	import TextArea from "$lib/components/TextArea.svelte";
+
+	const submit = () => {
+		console.log("hi");
+	};
 </script>
 
 <svelte:head>
@@ -13,7 +19,7 @@
 
 <section id="splash">
 	<h1>Luke Tong</h1>
-	<h3>Political and environmental activist</h3>
+	<h2>Political and environmental activist</h2>
 	<p>
 		Thanks for visiting my website. I will sometimes post about the things that I'm working on
 		as well as cool movements that I support and want to draw attention to.
@@ -32,7 +38,16 @@
 		<p>If you want to collaberate or just have questions, don't hesitate to answer me! I'm also open to discussions if you just want to talk.</p>
 	</div>
 	<div class="form">
-
+		<div class="top">
+			<Input placeholder="Email" />
+			<Input placeholder="Name" />
+		</div>
+		<TextArea placeholder="Write something about yourself or any questions!" />
+		<div class="bottom">
+			<div>
+				<Button onClick={submit} rounded>Submit</Button>
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -66,13 +81,32 @@
 		}
 
 		.form {
-			border-radius: 5px;
+			display: grid;
+			grid-template-rows: 1fr 3fr 1.2fr;
+			grid-gap: 0.9rem;
+
 			background-color: $base-200;
+			border-radius: 5px;
+			border-top: 5px solid $blue;
+			padding: 0.9rem;
 
 			transition: 0.3s;
 
 			&:hover {
 				box-shadow: 0 6px 8px -2px $base-300;
+			}
+
+			.top {
+				display: flex;
+				gap: 0.9rem;
+			}
+			.bottom {
+				position: relative;
+				div {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
 			}
 		}
 	}

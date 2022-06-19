@@ -18,8 +18,8 @@
 <style lang="scss">
 	a {
 		display: inline-block;
-		padding-block: 1rem;
-		padding-inline: 1.5rem;
+		padding-block: 0.8rem;
+		padding-inline: 1.2rem;
 
 		background-color: $base-300;
 
