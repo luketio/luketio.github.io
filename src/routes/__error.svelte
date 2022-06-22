@@ -11,7 +11,7 @@
 </script>
 
 <script lang="ts">
-	import Button from "$lib/components/Button.svelte";
+	import Link from "$lib/components/Link.svelte";
 
 	export let status: number;
 	export let error: Error;
@@ -27,7 +27,7 @@
 	<h1>{status}</h1>
 	<h2>{error.name}: {error.message}</h2>
 
-	<Button href="/" rounded>Return Home</Button>
+	<Link href="/" rounded>Return Home</Link>
 </div>
 
 <style lang="scss">
