@@ -17,7 +17,6 @@ const config = {
 
 			postcss: true,
 		}),
-		mdsvex(mdsvexConfig),
 	],
 
 	kit: {
