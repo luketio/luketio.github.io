@@ -4,6 +4,12 @@
 	import "../app.scss";
 </script>
 
+<svelte:head>
+	<title>Luke Tong's Blog</title>
+	<meta name="title" content="Luke Tong's Blog" />
+	<meta name="description" content="Political and Environmental activist" />
+</svelte:head>
+
 <header>
 	<a id="logo" href="/">
 		<img alt="logo svg" src="/logo.svg" />

@@ -1,16 +1,7 @@
 <script lang="ts">
-	export const hydrate = false;
-	export const prerender = true;
-
 	import Link from "$lib/components/Link.svelte";
 	import ContactForm from "$lib/components/home/ContactForm.svelte";
 </script>
-
-<svelte:head>
-	<title>Luke Tong's Blog</title>
-	<meta name="title" content="Luke Tong's Blog" />
-	<meta name="description" content="Political and Environmental activist" />
-</svelte:head>
 
 <section id="splash">
 	<h1>Luke Tong</h1>
