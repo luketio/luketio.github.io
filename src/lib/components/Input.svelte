@@ -1,5 +1,12 @@
 <script lang="ts">
+	/**
+	 * Placeholder text for the input area.
+	 */
 	export let placeholder = "Message";
+
+	/**
+	 * Default text for the input area.
+	 */
 	export let value = "";
 </script>
 

@@ -1,11 +1,12 @@
 <script lang="ts">
+	import Box from "$lib/components/Box.svelte";
 </script>
 
 <div class="post">
 	<aside>
-		<div>
-			<p>hi</p>
-		</div>
+		<Box>
+			<p>Hello</p>
+		</Box>
 	</aside>
 
 	<article>

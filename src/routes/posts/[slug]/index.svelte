@@ -1,9 +1,9 @@
 <script lang="ts">
 	type Post = {
-		title: string,
-		date: string,
-		tags: string[],
-	}
+		title: string;
+		date: string;
+		tags: string[];
+	};
 	export let content: string;
 	export let meta: Post;
 </script>

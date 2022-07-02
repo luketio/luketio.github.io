@@ -4,9 +4,7 @@ import rehypeSlug from "rehype-slug";
 const config = defineMDSveXConfig({
 	extensions: [".md"],
 
-	rehypePlugins: [
-		rehypeSlug,
-	],
+	rehypePlugins: [rehypeSlug],
 
 	smartypants: {
 		dashes: "oldschool",

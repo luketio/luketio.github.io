@@ -1,9 +1,19 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte";
 
+	/**
+	 * Are the corners of the button rounded?
+	 */
 	export let rounded = false;
+
+	/**
+	 * Is the button disabled?
+	 */
 	export let disabled = false;
 
+	/**
+	 * Dispatcher for the on:click event.
+	 */
 	const dispatch = createEventDispatcher();
 	const click = () => dispatch("click");
 </script>

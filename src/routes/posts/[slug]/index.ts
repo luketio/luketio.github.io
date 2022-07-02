@@ -1,7 +1,7 @@
 interface Params {
 	params: {
 		slug: string;
-	}
+	};
 }
 
 export async function get({ params }: Params) {
@@ -12,7 +12,7 @@ export async function get({ params }: Params) {
 			body: {
 				meta: post.metadata,
 				content: post.default,
-			}
+			},
 		};
 	}
 

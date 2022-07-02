@@ -1,6 +1,17 @@
 <script lang="ts">
-	export let href: string | undefined = undefined;
+	/**
+	 * Where does the link lead?
+	 */
+	export let href: string;
+
+	/**
+	 * Does the link open a new tab?
+	 */
 	export let refer = false;
+
+	/**
+	 * Is the link rounded?
+	 */
 	export let rounded = false;
 </script>
 
