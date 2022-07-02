@@ -1,22 +1,6 @@
-@font-face {
-	font-family: League Spartan;
-	src: url("/fonts/LeagueSpartan-Bold.ttf");
-}
-
-@font-face {
-	font-family: Work Sans Bold;
-	src: url("/fonts/WorkSans-Bold.ttf");
-}
-
-@font-face {
-	font-family: Work Sans;
-	src: url("/fonts/WorkSans-SemiBold.ttf");
-}
-
 * {
 	padding: 0;
 	margin: 0;
-	-ms-overflow-style: none;
 	background-color: transparent;
 	color: $content-100;
 
@@ -40,7 +24,6 @@ html {
 }
 
 h1 {
-	font-family: Work Sans Bold, inherit;
 	font-size: 4rem;
 }
 
@@ -52,13 +35,15 @@ h3 {
 	font-size: 1.8rem;
 }
 
+h1,
 h2,
 h3 {
-	font-family: Work Sans, inherit;
+	font-family: "Work Sans";
 	letter-spacing: 0.1rem;
 }
 
 p {
+	font-family: "Overpass";
 	line-height: 1.5rem;
 }
 

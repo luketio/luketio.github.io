@@ -49,10 +49,11 @@
 		background-color: $base-200;
 	}
 	#contact {
+		background-color: $base-100;
+
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 5vw;
-		background-color: $base-100;
 
 		h2 {
 			padding-bottom: 2vh;

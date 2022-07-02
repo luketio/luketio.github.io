@@ -4,32 +4,16 @@
 		date: string,
 		tags: string[],
 	}
-
 	export let content: string;
 	export let meta: Post;
 </script>
 
-<div class="post">
-	<section class="toc">
+<h1 class="title">{meta.title}</h1>
 
-	</section>
-	<section class="content">
-		<h2>{meta.date}</h2>
-
-		<svelte:component this={content} />
-	</section>
-</div>
+<svelte:component this={content} />
 
 <style lang="scss">
-	.post {
-		display: grid;
-		grid-template-columns: 1fr 3fr;
-		.toc {
-
-		}
-
-		.content {
-
-		}
+	.title {
+		margin-block: 8vh;
 	}
 </style>
