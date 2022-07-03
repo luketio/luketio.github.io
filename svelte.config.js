@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-static";
+import adapter from "@sveltejs/adapter-vercel";
 import preprocess from "svelte-preprocess";
 import mdsvexConfig from "./mdsvex.config.js";
 import { mdsvex } from "mdsvex";
@@ -20,6 +20,10 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
+
+		prerender: {
+			default: true,
+		},
 
 		vite: {
 			css: {
