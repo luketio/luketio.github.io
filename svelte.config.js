@@ -25,6 +25,12 @@ const config = {
 			default: true,
 		},
 
+		csp: {
+			directives: {
+			  	"script-src": ["self", "vitals.vercel-insights.com"],
+			}
+		},
+
 		vite: {
 			css: {
 				preprocessorOptions: {
