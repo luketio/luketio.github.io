@@ -1,5 +1,4 @@
 <script lang="ts" context="module">
-	/** @type {import('@sveltejs/kit').Load} */
 	export function load({ error, status }: { error: Error; status: number }) {
 		return {
 			props: {
@@ -24,8 +23,8 @@
 </svelte:head>
 
 <div>
-	<h1>{status}</h1>
-	<h2>{error.name}: {error.message}</h2>
+	<h1>{error.name}: {status}</h1>
+	<h2>{error.message}</h2>
 
 	<Link href="/" rounded>Return Home</Link>
 </div>

@@ -6,21 +6,24 @@
 	}
 
 	export async function load({ params }: Params) {
-		const post = await import(`../../../content/posts/${params.slug}.md`);
+		try {
+			const post = await import(`../../../content/posts/${params.slug}.md`);
 
-		if (post) {
+			if (post) {
+				return {
+					status: 200,
+					props: {
+						meta: post.metadata,
+						content: post.default,
+					},
+				};
+			}
+		} catch(e) {
 			return {
-				status: 200,
-				props: {
-					meta: post.metadata,
-					content: post.default,
-				},
+				status: 404,
+				error: new Error(`Post not found: /posts/${params.slug}`)
 			};
 		}
-
-		return {
-			status: 404,
-		};
 	}
 </script>
 

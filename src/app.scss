@@ -6,22 +6,6 @@
 	font-display: swap;
 }
 
-@font-face {
-	font-family: "Overpass";
-	font-weight: 400;
-	font-style: italic;
-	src: url("/fonts/Overpass/OverpassItalic.otf") format("opentype");
-	font-display: swap;
-}
-
-@font-face {
-	font-family: "Overpass";
-	font-weight: 500;
-	font-style: normal;
-	src: url("/fonts/Overpass/OverpassSemiBold.otf") format("opentype");
-	font-display: swap;
-}
-
 * {
 	padding: 0;
 	margin: 0;
@@ -52,12 +36,7 @@ html {
 h1,
 h2,
 h3 {
-	font-weight: 500;
 	letter-spacing: 0.1rem;
-}
-
-b {
-	font-weight: 500;
 }
 
 h1 {
@@ -80,7 +59,6 @@ b {
 
 a,
 button {
-	font-weight: 500;
 	color: $content-200;
 
 	&:hover {
