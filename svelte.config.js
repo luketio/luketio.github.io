@@ -27,8 +27,8 @@ const config = {
 
 		csp: {
 			directives: {
-			  	"script-src": ["self", "vitals.vercel-insights.com"],
-			}
+				"script-src": ["self", "vitals.vercel-insights.com"],
+			},
 		},
 
 		vite: {

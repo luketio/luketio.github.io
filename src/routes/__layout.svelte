@@ -27,19 +27,25 @@
 
 <footer>
 	<section>
-		<p>&copy; 2020 Luke Tong</p>
+		<p>Copyright &copy; 2022 Luke Tong</p>
 	</section>
 	<section>
-		<b>Channels</b>
-		<a href="/">LinkedIn</a>
-		<a href="/">Github</a>
-		<a href="/">Twitter</a>
+		<b>CHANNELS</b>
+		<a
+			href="https://www.linkedin.com/in/luke-tong-73525a224/"
+			target="_blank"
+			rel="noopener noreferrer">LinkedIn</a
+		>
+		<a href="https://github.com/luketio" target="_blank" rel="noopener noreferrer">Github</a>
+		<a href="https://twitter.com/luketio_" target="_blank" rel="noopener noreferrer">Twitter</a>
 	</section>
 	<section>
-		<b>Information</b>
-		<a href="/">New Jersey</a>
-		<a href="/">luke.rtong@gmail.com</a>
-		<a href="/">Resume</a>
+		<b>INFORMATION</b>
+		<p>New Jersey</p>
+		<a href="mailto:luke.rtong@gmail.com" target="_blank" rel="noopener noreferrer"
+			>luke.rtong@gmail.com</a
+		>
+		<a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
 	</section>
 </footer>
 
@@ -50,6 +56,10 @@
 		left: 0;
 		width: 100%;
 		background-color: $base-300;
+
+		&:hover {
+			box-shadow: 0 6px 8px -2px $base-300;
+		}
 
 		#logo {
 			display: inline-flex;
@@ -71,6 +81,7 @@
 	main {
 		display: block;
 		margin-top: 5vh;
+		min-height: 100vh;
 	}
 
 	footer {

@@ -20,6 +20,7 @@
 	class:rounded={rounded === true}
 	target={refer ? "_blank" : undefined}
 	rel={refer ? "noopener noreferrer" : undefined}
+	sveltekit:prefetch
 >
 	<slot />
 </a>

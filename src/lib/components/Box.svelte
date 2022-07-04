@@ -1,12 +1,25 @@
 <script lang="ts">
+	export let width = "none";
+	export let height = "none";
+	export let href = "";
 </script>
 
-<div>
-	<slot />
-</div>
+{#if href}
+	<a sveltekit:prefetch class="box" {href}>
+		<div style="width: {width}; height: {height};">
+			<slot />
+		</div>
+	</a>
+{:else}
+	<div class="box" style="width: {width}; height: {height};">
+		<slot />
+	</div>
+{/if}
 
 <style lang="scss">
-	div {
+	.box {
+		display: block;
+
 		background-color: $base-200;
 		border-radius: 5px;
 		border-top: 5px solid $blue;
