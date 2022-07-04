@@ -3,6 +3,7 @@
 	font-weight: 400;
 	font-style: normal;
 	src: url("/fonts/Overpass/OverpassRegular.otf") format("opentype");
+	font-display: swap;
 }
 
 @font-face {
@@ -10,6 +11,7 @@
 	font-weight: 400;
 	font-style: italic;
 	src: url("/fonts/Overpass/OverpassItalic.otf") format("opentype");
+	font-display: swap;
 }
 
 @font-face {
@@ -17,6 +19,7 @@
 	font-weight: 500;
 	font-style: normal;
 	src: url("/fonts/Overpass/OverpassSemiBold.otf") format("opentype");
+	font-display: swap;
 }
 
 * {
