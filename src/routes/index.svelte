@@ -3,6 +3,12 @@
 	import ContactForm from "$lib/components/home/ContactForm.svelte";
 </script>
 
+<svelte:head>
+	<title>Home | Luke Tong's Blog</title>
+	<meta name="title" content="Home | Luke Tong's Blog" />
+	<meta name="description" content="Political and Environmental activist" />
+</svelte:head>
+
 <section id="splash">
 	<h1>Luke Tong</h1>
 	<h2>Political and environmental activist</h2>

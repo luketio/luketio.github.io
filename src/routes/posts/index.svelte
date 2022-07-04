@@ -10,6 +10,12 @@
 	export let posts: Post[];
 </script>
 
+<svelte:head>
+	<title>Posts | Luke Tong's Blog</title>
+	<meta name="title" content="Posts | Luke Tong's Blog" />
+	<meta name="description" content="Recent Posts by Luke Tong" />
+</svelte:head>
+
 <section>
 	<h2>Posts</h2>
 </section>

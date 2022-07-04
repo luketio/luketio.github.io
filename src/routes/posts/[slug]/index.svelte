@@ -31,6 +31,13 @@
 	export let meta: Meta;
 </script>
 
+<svelte:head>
+	<title>{meta.title}</title>
+	<meta name="title" content="{meta.title} | Luke Tong's Blog" />
+	<meta name="description" content={meta.description} />
+	<meta name="keywords" content={meta.tags.join(", ")}>
+</svelte:head>
+
 <h1 class="title">{meta.title}</h1>
 
 <svelte:component this={content} />
