@@ -8,12 +8,14 @@
 		"preview": "npm run build && svelte-kit preview",
 		"package": "svelte-kit package",
 		"prepare": "svelte-kit sync",
+		"postinstall": "prisma generate",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --fix .",
 		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"dependencies": {
+		"@prisma/client": "^4.0.0",
 		"dayjs": "^1.11.3",
 		"svelte-forms": "^2.3.1"
 	},
@@ -32,6 +34,7 @@
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^2.7.1",
 		"prettier-plugin-svelte": "^2.7.0",
+		"prisma": "^4.0.0",
 		"rehype-slug": "^5.0.1",
 		"sass": "^1.53.0",
 		"svelte": "^3.48.0",

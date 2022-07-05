@@ -18,10 +18,10 @@
 					},
 				};
 			}
-		} catch(e) {
+		} catch (e) {
 			return {
 				status: 404,
-				error: new Error(`Post not found: /posts/${params.slug}`)
+				error: new Error(`Post not found: /posts/${params.slug}`),
 			};
 		}
 	}

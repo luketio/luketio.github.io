@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { form as createForm, field } from "svelte-forms";
 	import { required, email } from "svelte-forms/validators";
-	import Box from "../Box.svelte";
 
+	import Box from "../Box.svelte";
 	import Button from "../Button.svelte";
 	import Input from "../Input.svelte";
 	import TextArea from "../TextArea.svelte";
@@ -13,8 +13,20 @@
 
 	const contactForm = createForm(emailField, nameField, messageField);
 
-	const submit = () => {
-		alert();
+	const handleSubmit = async () => {
+		await fetch("/api/forms/contact", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({
+				email: $emailField.value,
+				name: $nameField.value,
+				message: $messageField.value,
+			}),
+		});
+
+		contactForm.reset();
 	};
 </script>
 
@@ -39,7 +51,7 @@
 				<p>✕ Message body is required</p>
 			{/if}
 			<div>
-				<Button disabled={!$contactForm.valid} on:click={submit} rounded>Submit</Button>
+				<Button disabled={!$contactForm.valid} on:click={handleSubmit} rounded>Submit</Button>
 			</div>
 		</div>
 	</form>
