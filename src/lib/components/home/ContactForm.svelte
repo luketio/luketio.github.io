@@ -17,7 +17,7 @@
 		await fetch("/api/forms/contact", {
 			method: "POST",
 			headers: {
-				"Content-Type": "application/json"
+				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({
 				email: $emailField.value,
@@ -51,7 +51,9 @@
 				<p>✕ Message body is required</p>
 			{/if}
 			<div>
-				<Button disabled={!$contactForm.valid} on:click={handleSubmit} rounded>Submit</Button>
+				<Button disabled={!$contactForm.valid} on:click={handleSubmit} rounded
+					>Submit</Button
+				>
 			</div>
 		</div>
 	</form>
