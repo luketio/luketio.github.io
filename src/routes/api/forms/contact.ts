@@ -1,13 +1,19 @@
 import { PrismaClient } from "@prisma/client";
+import type { RequestHandler } from "@sveltejs/kit";
 
 const prisma = new PrismaClient();
 
-export const post = async (request: Request) => {
+export const post: RequestHandler = async ({ request }) => {
 	await prisma.$connect();
 
-	await prisma.contact_form.create({
+	const data = await prisma.contact_form.create({
 		data: await request.json(),
 	});
 
 	prisma.$disconnect();
+
+	return {
+		status: 200,
+		body: data,
+	}
 };

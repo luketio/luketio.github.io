@@ -30,16 +30,6 @@ const config = {
 				"script-src": ["self"],
 			},
 		},
-
-		vite: {
-			css: {
-				preprocessorOptions: {
-					scss: {
-						additionalData: "@use \"src/variables.scss\" as *;",
-					},
-				},
-			},
-		},
 	},
 };
 
