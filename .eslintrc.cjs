@@ -23,6 +23,13 @@ module.exports = {
 		indent: ["error", "tab"],
 		"no-unused-vars": ["error", { vars: "all", args: "after-used", ignoreRestSiblings: true }],
 		"comma-dangle": ["error", "always-multiline"],
-		"eol-last": ["error", "always"]
+		"eol-last": ["error", "always"],
+		"prefer-const": [
+			"error",
+			{
+				destructuring: "any",
+				ignoreReadBeforeAssign: false
+			}
+		]
 	}
 };

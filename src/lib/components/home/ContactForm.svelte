@@ -33,10 +33,11 @@
 <Box>
 	<form>
 		<div class="top">
-			<Input placeholder="Email" bind:value={$emailField.value} />
-			<Input placeholder="Name" bind:value={$nameField.value} />
+			<Input name="email" placeholder="Email" bind:value={$emailField.value} />
+			<Input name="name" placeholder="Name" bind:value={$nameField.value} />
 		</div>
 		<TextArea
+			name="message"
 			placeholder="Write something about yourself or any questions!"
 			bind:value={$messageField.value}
 		/>

@@ -5,7 +5,7 @@
 		};
 	}
 
-	export async function load({ params }: Params) {
+	export const load = async ({ params }: Params) => {
 		try {
 			const post = await import(`../../../content/posts/${params.slug}.md`);
 
@@ -24,7 +24,7 @@
 				error: new Error(`Post not found: /posts/${params.slug}`),
 			};
 		}
-	}
+	};
 </script>
 
 <script lang="ts">
@@ -35,7 +35,7 @@
 </script>
 
 <svelte:head>
-	<title>{meta.title}</title>
+	<title>{meta.title} | Luke Tong's Blog</title>
 	<meta name="title" content="{meta.title} | Luke Tong's Blog" />
 	<meta name="description" content={meta.description} />
 	<meta name="keywords" content={meta.tags.join(", ")} />

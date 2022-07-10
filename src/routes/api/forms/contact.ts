@@ -15,5 +15,5 @@ export const post: RequestHandler = async ({ request }) => {
 	return {
 		status: 200,
 		body: data,
-	}
+	};
 };

@@ -1,5 +1,10 @@
 <script lang="ts">
 	/**
+	 * Name attribute of textarea element.
+	 */
+	export let name: string;
+
+	/**
 	 * Placeholder text for the text area.
 	 */
 	export let placeholder = "Message";
@@ -10,7 +15,7 @@
 	export let value = "";
 </script>
 
-<textarea {placeholder} bind:value />
+<textarea {name} {placeholder} bind:value />
 
 <style lang="scss">
 	textarea {

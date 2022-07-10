@@ -1,6 +1,7 @@
+import type { RequestHandler } from "@sveltejs/kit";
 import fs from "fs";
 
-export async function get() {
+export const get: RequestHandler = async () => {
 	const pdf = fs.readFileSync("/resume.pdf");
 
 	return {
@@ -12,4 +13,4 @@ export async function get() {
 			pdf,
 		},
 	};
-}
+};

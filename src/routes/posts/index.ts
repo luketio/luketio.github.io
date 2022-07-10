@@ -19,4 +19,4 @@ export const get: RequestHandler = async () => {
 			posts: posts,
 		},
 	};
-}
+};

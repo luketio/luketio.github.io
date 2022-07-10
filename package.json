@@ -3,13 +3,13 @@
 	"license": "MIT",
 	"type": "module",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --open",
 		"build": "vite build",
 		"preview": "npm run build && vite preview",
 		"package": "svelte-kit package",
 		"prepare": "svelte-kit sync",
 		"postinstall": "prisma generate",
-		"test": "playwright test",
+		"test": "playwright open",
 		"check": "svelte-check --tsconfig ./tsconfig.json",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --fix .",
 		"format": "prettier --write --plugin-search-dir=. ."

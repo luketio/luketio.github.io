@@ -1,5 +1,5 @@
 import { expect, test } from "@playwright/test";
-import { PrismaClient } from "@prisma/client"
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -8,25 +8,21 @@ test.describe("Home Page", () => {
 		await page.goto("/");
 	});
 
-	test("splash works", async ({ page }) => {
+	test("splash works", async ({ page }) => {});
 
-	})
-
-	test("about works", async ({ page }) => {
-
-	})
+	test("about works", async ({ page }) => {});
 
 	test("contact form works", async ({ page }) => {
 		const email = "jdoe@example.com";
-		const name = "Luke";
+		const name = "John Doe";
 		const message = "This is a test message";
 
 		// fill out form
-		await page.locator('[placeholder="Email"]').fill(email);
-		await page.locator('[placeholder="Name"]').fill(name);
-		await page.locator('textarea').fill(message);
+		await page.fill("input[name=\"email\"]", email);
+		await page.fill("input[name=\"name\"]", name);
+		await page.fill("textarea[name=\"message\"]", message);
 
-		await page.locator('text=Submit').click();
+		await page.click("text=Submit");
 
 		// make sure form data is sent to server
 		await prisma.$connect();
@@ -38,13 +34,15 @@ test.describe("Home Page", () => {
 				name: name,
 				message: message,
 			}
-		})
+		});
 
-		expect(formData?.email).toBe(email);
-
+		await console.log(formData);
 		*/
+
+		// expect(formData?.email).toBe(email);
+
 		// expect(rows.count).toBeGreaterThanOrEqual(1);
 
-		prisma.$disconnect();
-	})
+		await prisma.$disconnect();
+	});
 });

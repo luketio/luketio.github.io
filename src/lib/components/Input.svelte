@@ -1,5 +1,10 @@
 <script lang="ts">
 	/**
+	 * Name attribute of input element.
+	 */
+	export let name: string;
+
+	/**
 	 * Placeholder text for the input area.
 	 */
 	export let placeholder = "Message";
@@ -10,7 +15,7 @@
 	export let value = "";
 </script>
 
-<input type="text" {placeholder} bind:value />
+<input {name} type="text" {placeholder} bind:value />
 
 <style lang="scss">
 	input {
