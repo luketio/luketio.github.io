@@ -3,7 +3,7 @@ import type { RequestHandler } from "@sveltejs/kit";
 
 const prisma = new PrismaClient();
 
-export const post: RequestHandler = async ({ request }) => {
+export const POST: RequestHandler = async ({ request }) => {
 	await prisma.$connect();
 
 	const data = await prisma.contact_form.create({
