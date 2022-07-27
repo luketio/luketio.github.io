@@ -22,6 +22,7 @@
 
 <section id="about">
 	<h2>About</h2>
+	<p>Hi, I'm Luke. I'm a Senior at Princeton High School</p>
 </section>
 
 <section id="contact">

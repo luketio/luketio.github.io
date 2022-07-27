@@ -2,7 +2,7 @@ import type { Post } from "$lib/types";
 import type { RequestHandler } from "@sveltejs/kit";
 
 export const GET: RequestHandler = async () => {
-	const paths = import.meta.glob("../../content/posts/*.md", { eager: true });
+	const paths = import.meta.glob<any>("../../content/posts/*.md", { eager: true });
 
 	const posts: Post[] = [];
 

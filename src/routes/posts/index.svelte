@@ -23,10 +23,17 @@
 <section>
 	<main>
 		{#each posts as post}
-			<Box width="35vw" height="30vh" href={post.slug}>
-				<h3>{post.meta.title}</h3>
-				<small>{dayjs().format("dddd, MMMM D, YYYY")}</small>
-				<p>{post.meta.description}</p>
+			<Box width="35vw" height="25vh" href={post.slug}>
+				<div class="content">
+					<div>
+						<img src={post.meta.img} alt="preview" />
+					</div>
+					<div>
+						<h3>{post.meta.title}</h3>
+						<small>{dayjs().format("dddd, MMMM D, YYYY")}</small>
+						<p>{post.meta.description}</p>
+					</div>
+				</div>
 			</Box>
 		{/each}
 	</main>
@@ -36,7 +43,7 @@
 	main {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-gap: 4vw;
+		grid-gap: 1vw;
 	}
 
 	section {
@@ -48,13 +55,35 @@
 		margin-top: 15vh;
 	}
 
-	small {
-		color: $content-200;
-		font-size: smaller;
-	}
+	.content {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		grid-gap: 2vh;
 
-	p {
-		margin-top: 3vh;
-		word-wrap: break-word;
+		padding: 1vh;
+
+		div {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		img {
+			border-radius: 5px;
+			object-fit: cover;
+			width: 22vh;
+			height: 22vh;
+		}
+
+		small {
+			color: $content-200;
+			font-size: smaller;
+		}
+
+		p {
+			font-size: 1rem;
+			margin-top: 2vh;
+			word-wrap: break-word;
+		}
 	}
 </style>
